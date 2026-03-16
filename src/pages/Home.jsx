@@ -170,7 +170,7 @@ export default function Home() {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(168deg, rgba(18,9,2,0.55) 0%, rgba(14,7,1,0.72) 35%, rgba(10,5,1,0.88) 100%)",
+            "linear-gradient(168deg, rgba(30,18,8,0.38) 0%, rgba(26,14,6,0.48) 35%, rgba(22,10,3,0.55) 100%)",
         }}
       />
 
@@ -181,7 +181,7 @@ export default function Home() {
           inset: 0,
           zIndex: 2,
           background:
-            "radial-gradient(ellipse at 65% 5%, rgba(140,90,30,0.22) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 65% 5%, rgba(180,130,80,0.25) 0%, transparent 55%)",
         }}
       />
 
@@ -246,10 +246,10 @@ export default function Home() {
           style={{
             margin: "20px 16px 16px",
             borderRadius: "14px",
-            background: "rgba(12,6,1,0.52)",
+            background: "rgba(18,10,4,0.42)",
             backdropFilter: "blur(22px)",
             WebkitBackdropFilter: "blur(22px)",
-            border: "0.5px solid rgba(255,240,210,0.1)",
+            border: "0.5px solid rgba(255,240,210,0.15)",
             flex: 1,
             display: "flex",
             flexDirection: "column",

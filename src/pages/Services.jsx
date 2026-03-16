@@ -212,7 +212,7 @@ export default function Services() {
           inset: 0,
           zIndex: 1,
           background:
-            "linear-gradient(158deg, rgba(16,8,2,0.60) 0%, rgba(12,6,1,0.78) 40%, rgba(8,4,0,0.90) 100%)",
+            "linear-gradient(158deg, rgba(28,16,6,0.42) 0%, rgba(24,12,3,0.52) 40%, rgba(20,8,0,0.62) 100%)",
         }}
       />
 
@@ -223,7 +223,7 @@ export default function Services() {
           inset: 0,
           zIndex: 2,
           background:
-            "radial-gradient(ellipse at 60% 10%, rgba(140,90,30,0.2) 0%, transparent 55%)",
+            "radial-gradient(ellipse at 60% 10%, rgba(180,130,80,0.25) 0%, transparent 55%)",
         }}
       />
 

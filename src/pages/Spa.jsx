@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import BackIcon from "../components/BackIcon";
-import spa1 from "../assets/spa-1.webp";
-import spa2 from "../assets/spa-2.webp";
-import spa3 from "../assets/spa-3.webp";
-import spa4 from "../assets/spa-4.webp";
-import spa5 from "../assets/spa-5.webp";
+import spa1 from "../assets/spa/spa-1.webp";
+import spa2 from "../assets/spa/spa-2.webp";
+import spa3 from "../assets/spa/spa-3.webp";
+import spa4 from "../assets/spa/spa-4.webp";
+import spa5 from "../assets/spa/spa-5.webp";
 
 const spaImages = [spa1, spa2, spa3, spa4, spa5];
 

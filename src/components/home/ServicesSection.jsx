@@ -63,35 +63,30 @@ export default function ServicesSection({
         .nav-btn:hover { background: rgba(255,255,255,0.2) !important; }
       `}</style>
       <p style={labelStyle}>Services</p>
-
-      {/* <div
+      <div
         style={{
-          borderRadius: "14px",
-          background: "rgba(10,5,1,0.52)",
-          backdropFilter: "blur(22px)",
-          padding: "16px",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "10px",
         }}
-      > */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "10px",
-          }}
-        >
-          {services.map((service, i) => (
-            <ServiceCard
-              key={service.name}
-              name={service.name}
-              subtitle={service.subtitle}
-              Icon={service.Icon}
-              isVisible={true}
-              delayClass={`s${i}`}
-              onClick={() => navigate(service.path)}
-            />
-          ))}
-        </div>
-      {/* </div> */}
+      >
+        {services.map((service, i) => (
+          <ServiceCard
+            key={service.name}
+            name={service.name}
+            subtitle={service.subtitle}
+            Icon={service.Icon}
+            isVisible={true}
+            delayClass={`s${i}`}
+            // onClick={() => navigate(service.path)}
+            onClick={() => {
+                if (service.name === "Spa") {
+                  navigate("/spa");
+                }
+              }}
+          />
+        ))}
+      </div>
     </section>
   );
 }

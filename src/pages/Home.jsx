@@ -7,24 +7,9 @@ import PromotionsSection from "../components/home/PromotionsSection";
 import HeadOfficeSection from "../components/home/HeadOfficeSection";
 import FollowUsSection from "../components/home/FollowUsSection";
 import FooterCopyright from "../components/FooterCopyright";
-import SpaIcon from "../components/icons/SpaIcon";
-import RoomServiceIcon from "../components/icons/RoomServiceIcon";
-import BookIcon from "../components/icons/BookIcon";
-import ScrollIcon from "../components/icons/ScrollIcon";
-import FacilitiesIcon from "../components/icons/FacilitiesIcon";
-import ServiceCard from "../components/services/ServiceCard";
-
-const services = [
-  { name: "Spa", subtitle: "Wellness & Ritual", Icon: SpaIcon },
-  { name: "Room Service", subtitle: "In-Villa Dining", Icon: RoomServiceIcon },
-  { name: "Villa Compendium", subtitle: "Villa Guide", Icon: BookIcon },
-  { name: "Villa Rules", subtitle: "Policies & Info", Icon: ScrollIcon },
-  {
-    name: "Facilities & Activities",
-    subtitle: "Pool, Garden & Amenities",
-    Icon: FacilitiesIcon,
-  },
-];
+import canggu from "../assets/promotions/canggu.jpg";
+import seminyak from "../assets/promotions/seminyak.jpg";
+import suite from "../assets/promotions/suite.jpg";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -40,11 +25,23 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const promos = [
-    { title: "Garden\nRelaxation", tag: "Nature" },
-    { title: "Breakfast\nSpecial", tag: "Dining" },
-    { title: "Tropical\nWalk", tag: "Adventure" },
-  ];
+ const promos = [
+  {
+    title: "Garden\nRelaxation",
+    tag: "Nature",
+    image: canggu,
+  },
+  {
+    title: "Breakfast\nSpecial",
+    tag: "Dining",
+    image: seminyak,
+  },
+  {
+    title: "Tropical\nWalk",
+    tag: "Adventure",
+    image: suite,
+  },
+];
 
   const labelStyle = {
     fontFamily: "'Jost', sans-serif",

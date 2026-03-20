@@ -1,25 +1,32 @@
+import { useNavigate } from "react-router-dom";
 import canggu from "../../assets/promotions/canggu.jpg";
 import seminyak from "../../assets/promotions/seminyak.jpg";
 import suite from "../../assets/promotions/suite.jpg";
+
 const promosData = [
   {
     tag: "Canggu",
     // title: "Garden\nRelaxation",
     image: canggu,
+    path: "/canggu",
   },
   {
     tag: "Seminyak",
     // title: "Breakfast\nSpecial",
     image: seminyak,
+    path: "/seminyak",
   },
   {
     tag: "Suite",
     // title: "Tropical\nWalk",
     image: suite,
+    path: "/suite",
   },
 ];
 
-export default function PromotionsSection({ labelStyle, visible, promos }) {
+export default function PromotionsSection({ labelStyle, visible }) {
+  const navigate = useNavigate();
+
     return (
     <section className={`bali-up d3 ${visible ? "on" : ""}`}>
       <p style={labelStyle}>Promotions</p>
@@ -60,10 +67,11 @@ export default function PromotionsSection({ labelStyle, visible, promos }) {
                 fontSize: "8.5px",
                 letterSpacing: "2px",
                 textTransform: "uppercase",
-                color:
-                  i === 1
-                    ? "rgba(190,148,88,0.88)"
-                    : "rgba(200,172,132,0.65)",
+                color: "rgba(200,172,132,0.65)",
+                // color:
+                //   i === 1
+                //     ? "rgba(190,148,88,0.88)"
+                //     : "rgba(200,172,132,0.65)",
               }}
             >
               {promo.tag}
@@ -93,6 +101,8 @@ export default function PromotionsSection({ labelStyle, visible, promos }) {
                 objectFit: "cover",
                 borderRadius: "6px",
               }}
+              delayClass={`s${i}`}
+              onClick={() => navigate(promo.path)}
             />
           </div>
         ))}

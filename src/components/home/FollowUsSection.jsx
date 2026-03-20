@@ -2,7 +2,6 @@ import InfoIconCircle from "../InfoIconCircle";
 
 const socialLinks = [
   {
-    label: "Instagram",
     icon: (
       <svg
         width="14"
@@ -21,7 +20,6 @@ const socialLinks = [
     ),
   },
   {
-    label: "Facebook",
     icon: (
       <svg
         width="14"
@@ -38,7 +36,6 @@ const socialLinks = [
     ),
   },
   {
-    label: "YouTube",
     icon: (
       <svg
         width="14"
@@ -56,8 +53,7 @@ const socialLinks = [
     ),
   },
   {
-    label: "www.thebalidreamvilla.com",
-    href: "https://thebalidreamvilla.krisnagentawinangun.com/",
+    href: "https://thebalidreamvilla.com/",
     icon: (
       <svg
         width="14"
@@ -86,8 +82,8 @@ export default function FollowUsSection({ labelStyle, visible }) {
       }}
     >
       <p style={labelStyle}>Follow Us</p>
-      <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-        {socialLinks.map(({ label, icon, href }, i) => (
+      <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
+          {socialLinks.map(({ label, icon, href }, i) => (
           <a
             key={i}
             href={href}

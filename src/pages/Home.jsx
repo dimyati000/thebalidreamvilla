@@ -2,13 +2,29 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import villaImage from "../assets/Villa.jpeg";
 import logo from "../assets/logo.webp";
-import WelcomeSection from "../components/home/WelcomeSection";
 import ServicesSection from "../components/home/ServicesSection";
 import PromotionsSection from "../components/home/PromotionsSection";
-import PropertySection from "../components/home/PropertySection";
 import HeadOfficeSection from "../components/home/HeadOfficeSection";
 import FollowUsSection from "../components/home/FollowUsSection";
 import FooterCopyright from "../components/FooterCopyright";
+import SpaIcon from "../components/icons/SpaIcon";
+import RoomServiceIcon from "../components/icons/RoomServiceIcon";
+import BookIcon from "../components/icons/BookIcon";
+import ScrollIcon from "../components/icons/ScrollIcon";
+import FacilitiesIcon from "../components/icons/FacilitiesIcon";
+import ServiceCard from "../components/services/ServiceCard";
+
+const services = [
+  { name: "Spa", subtitle: "Wellness & Ritual", Icon: SpaIcon },
+  { name: "Room Service", subtitle: "In-Villa Dining", Icon: RoomServiceIcon },
+  { name: "Villa Compendium", subtitle: "Villa Guide", Icon: BookIcon },
+  { name: "Villa Rules", subtitle: "Policies & Info", Icon: ScrollIcon },
+  {
+    name: "Facilities & Activities",
+    subtitle: "Pool, Garden & Amenities",
+    Icon: FacilitiesIcon,
+  },
+];
 
 export default function Home() {
   const navigate = useNavigate();
@@ -202,18 +218,10 @@ export default function Home() {
             gap: "36px",
           }}
         >
-          <WelcomeSection
-            labelStyle={labelStyle}
-            visible={visible}
-            onContactClick={() =>
-              footerRef.current?.scrollIntoView({ behavior: "smooth" })
-            }
-          />
-
+    
           <ServicesSection
             labelStyle={labelStyle}
             visible={visible}
-            onNavigateServices={() => navigate("/services")}
           />
 
           <PromotionsSection
@@ -221,8 +229,6 @@ export default function Home() {
             visible={visible}
             promos={promos}
           />
-
-          <PropertySection labelStyle={labelStyle} visible={visible} />
 
           <HeadOfficeSection labelStyle={labelStyle} visible={visible} />
 

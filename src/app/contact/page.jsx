@@ -101,7 +101,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-stone-50">
+    <main className="relative min-h-screen bg-stone-50">
       {/* HERO + CONTACT */}
       <section className="relative isolate w-full pb-20 pt-28 md:pb-28 md:pt-40">
         <div className="absolute inset-0 -z-20">
@@ -325,6 +325,15 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* 
+        FOOTER TRANSITION
+        Membuat gradasi putih halus yang tumpah ke arah footer agar tidak ada potongan kasar
+      */}
+      <div 
+        aria-hidden="true" 
+        className="absolute left-0 right-0 -bottom-10 h-10 bg-gradient-to-b from-stone-50 to-transparent pointer-events-none z-20"
+      />
     </main>
   );
 }

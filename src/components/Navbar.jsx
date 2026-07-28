@@ -65,13 +65,13 @@ export default function Navbar() {
 
         <div className="hidden h-full items-center gap-5 text-[10px] font-medium tracking-[0.19em] xl:flex 2xl:gap-7 2xl:text-[11px]">
           {menuItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (pathname.startsWith(item.href) && item.href !== "/");
 
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative flex h-full items-center whitespace-nowrap transition-colors duration-300 after:absolute after:bottom-[17px] after:left-0 after:h-px after:bg-brand-gold after:transition-all after:duration-300 ${
+                className={`relative flex h-full items-center whitespace-nowrap transition-colors duration-300 after:content-[''] after:absolute after:bottom-[17px] after:left-0 after:h-px after:bg-brand-gold after:transition-all after:duration-300 ${
                   isActive
                     ? "text-white after:w-full"
                     : "text-white/60 after:w-0 hover:text-white hover:after:w-full"
@@ -135,7 +135,7 @@ export default function Navbar() {
       >
         <div className="space-y-1 px-5 py-5 text-left text-[11px] font-semibold tracking-[0.15em] sm:px-7">
           {menuItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = pathname === item.href || (pathname.startsWith(item.href) && item.href !== "/");
 
             return (
               <Link

@@ -24,8 +24,9 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body>
+      <body suppressHydrationWarning>
         <SliderBackgroundProvider>
           <Navbar />
           <main>{children}</main>

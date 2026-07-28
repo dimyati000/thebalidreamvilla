@@ -6,12 +6,12 @@ import FacilitiesSection from "@/components/home/FacilitiesSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-gradient-to-b from-white via-[#f1f1ed] to-[#d7d7d3] text-stone-800">
+    <div className="bg-white text-stone-800 min-h-screen overflow-x-hidden">
       <HeroSection />
       <IntroSection />
       <AccommodationSection />
       <OffersSection />
       <FacilitiesSection />
-    </main>
+    </div>
   );
 }

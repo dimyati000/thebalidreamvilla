@@ -118,7 +118,7 @@ export default function ContactPage() {
 
         {/* Hero overlay dibuat lebih lembut menuju bagian map */}
         <div className="absolute inset-0 -z-10 bg-black/45" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/70 via-black/15 to-transparent" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-black/15 to-transparent" />
         {/* Fade smoothly to the background color at the bottom of the hero image */}
         <div className="absolute bottom-0 left-0 right-0 h-48 -z-10 bg-gradient-to-b from-transparent to-stone-50" />
 

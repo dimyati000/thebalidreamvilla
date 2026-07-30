@@ -7,13 +7,14 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { name: "HOME", href: "/" },
-  { name: "ABOUT US", href: "/about" },
-  { name: "VILLAS & SUITES", href: "/villas" },
-  { name: "DINING", href: "/dining" },
-  { name: "SPA & WELLNESS", href: "/spa" },
+  { name: "VILLAS", href: "/villas" },
+  { name: "SPECIAL OFFERS", href: "/special-offers" },
   { name: "FACILITIES", href: "/facilities" },
+  { name: "WEDDING", href: "/wedding" },
+  { name: "VIRTUAL TOUR", href: "/virtual-tour" },
   { name: "GALLERY", href: "/gallery" },
-  { name: "CONTACT US", href: "/contact" },
+  { name: "CONTACT US", href: "/contact-us" },
+  { name: "OUR VILLA", href: "/our-villa" },
 ];
 
 export default function Navbar() {

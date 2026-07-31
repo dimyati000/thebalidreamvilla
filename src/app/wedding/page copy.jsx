@@ -233,6 +233,7 @@ function PackageModal({ pkg, onClose }) {
 function PackageCard({ pkg, index, onOpenDetails }) {
   const [activeImgIndex, setActiveImgIndex] = useState(0);
   const currentImage = pkg.images[activeImgIndex];
+  const isEven = index % 2 === 0;
 
   return (
     <motion.div
@@ -242,9 +243,9 @@ function PackageCard({ pkg, index, onOpenDetails }) {
       transition={{ duration: 0.65, delay: index * 0.1, ease: "easeOut" }}
       className="group relative overflow-hidden rounded-[28px] border border-black/[0.08] bg-[#e5e5e2]/80 shadow-[0_12px_36px_rgba(45,45,40,0.12)] transition-all duration-500 hover:shadow-[0_20px_48px_rgba(45,45,40,0.2)]"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12">
+      <div className={`grid grid-cols-1 lg:grid-cols-12 ${!isEven ? "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1" : ""}`}>
         {/* Image Side */}
-        <div className="relative order-1 lg:col-start-6 lg:col-span-7 lg:row-start-1 flex flex-col justify-between overflow-hidden bg-stone-900 min-h-[340px] sm:min-h-[420px]">
+        <div className="relative lg:col-span-7 flex flex-col justify-between overflow-hidden bg-stone-900 min-h-[340px] sm:min-h-[420px]">
           <Image
             src={currentImage.src}
             alt={currentImage.caption || pkg.title}
@@ -288,7 +289,7 @@ function PackageCard({ pkg, index, onOpenDetails }) {
         </div>
 
         {/* Info Side */}
-        <div className="relative order-2 lg:col-start-1 lg:col-span-5 lg:row-start-1 flex flex-col justify-between p-6 sm:p-8 md:p-10">
+        <div className="relative lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 md:p-10">
           <div
             aria-hidden="true"
             className="absolute -right-4 -top-4 text-[96px] opacity-[0.06] select-none pointer-events-none"
